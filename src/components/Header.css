@@ -63,7 +63,7 @@ body {
     justify-self: center;
   }
   .picForCat {
-    display: none;
+    display: block;
   }
   .hidden-categories-text {
     display: block;
