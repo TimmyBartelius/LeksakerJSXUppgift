@@ -1,0 +1,8 @@
+.headline {
+  background-color: rgb(29, 187, 255);
+  padding: 30px;
+  margin: 20px;
+  border-radius: 10px;
+  color: rgb(255, 255, 255);
+  text-align: center;
+}

@@ -1,0 +1,50 @@
+header {
+  width: 100%;
+  background-color: rgb(4, 104, 217);
+  margin: 0;
+  padding-top: 10px;
+}
+body {
+  margin: 0;
+}
+#allLogosHeader {
+  display: flex;
+  justify-content: space-around;
+}
+#logo {
+  cursor: pointer;
+}
+#cartLogo {
+  cursor: pointer;
+}
+#allProductsBtns {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  display: grid;
+  grid-template-columns: repeat(4, 25%);
+  justify-items: center;
+}
+.picForCat {
+  cursor: pointer;
+}
+.categories {
+  color: rgb(255, 255, 255);
+  font-weight: 600;
+  text-align: center;
+  font-size: 15px;
+}
+.hidden-categories-text {
+  display: none;
+}
+
+@media (max-width: 560px) {
+  .categories {
+    display: none;
+  }
+  .hidden-categories-text {
+    display: block;
+    text-align: center;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+  }
+}

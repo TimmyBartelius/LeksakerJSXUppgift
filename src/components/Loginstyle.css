@@ -1,0 +1,54 @@
+.admin-field {
+  background-color: rgb(180, 236, 255);
+  width: 400px;
+  height: 500px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  justify-self: center;
+  border: solid 3px rgb(22, 64, 189);
+  border-radius: 5px;
+}
+.admin-input-field {
+  padding: 10px;
+  width: 300px;
+  height: 40px;
+}
+.admin-text {
+  font-weight: 700;
+  font-size: 50px;
+  text-align: center;
+  padding: 10px;
+}
+#LoginBtn {
+  padding: 20px;
+  margin-top: 10px;
+  border: none;
+  background-color: rgb(22, 64, 189);
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  font-size: 25px;
+}
+.error-field {
+  font-size: 40px;
+  background-color: rgb(255, 0, 0);
+}
+
+@media (max-width: 440px) {
+  .admin-field {
+    width: 100%;
+  }
+  .admin-text {
+    font-size: 30px;
+  }
+  .admin-input-field {
+    margin: 10px;
+    width: 80%;
+  }
+  .error-field {
+    font-size: 20px;
+  }
+}
