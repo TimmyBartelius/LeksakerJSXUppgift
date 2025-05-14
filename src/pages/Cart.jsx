@@ -24,7 +24,7 @@ const Cart = () => {
   return (
     <main>
       <Header />
-      <h2>Din Varukorg</h2>
+      <h2 id="your-cart">DIN VARUKORG</h2>
 
       {showThankYou && <p className="thank-you">Tack för ditt köp! 💖</p>}
 
