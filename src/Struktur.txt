@@ -1,38 +1,36 @@
-1. Du ska använda: React, Joi, React Router (med HashRouter), state manager (Zustand, Context eller Redux) och Firestore. Fråga först om du vill använda någon annan teknik.
+1. Du ska använda: React, Joi, React Router (med HashRouter), state manager (Zustand, Context eller Redux) och Firestore. Fråga först om du vill använda någon annan teknik. 
+(100%)
+Vi använder React, React Router(HashRouter), Joi och state manager Context och även Firestore just nu.
+            (100%)  (100%)                  (90%)                   (50%)           (100%)
 
-
-2. Du ska visa upp din app och din kod för läraren minst en gång under sista kursveckan. Var beredd på att förklara vad koden gör, samt att berätta om testningen.
-
+2. Du ska visa upp din app och din kod för läraren minst en gång under sista kursveckan. Var beredd på att förklara vad koden gör, samt att berätta om testningen. (100%)
 
 3. Designskiss i Figma. (Ska testas i testgrupp - se nedan) (AMIR OCH ELHAM / VILMER & EMMA)
 
-
 4. Webbshoppen ska ha stöd för två sorters användare: kunder och administratörer.
-För G: ingen inloggning nödvändig.
+För G: ingen inloggning nödvändig. (100%)
 För VG: man måste logga in för att kunna använda admin-funktionalitet.
 
+5. För kunder ska appen vara responsiv: fungera både på breda skärmar och ner till 320px. (90%)
 
-5. För kunder ska appen vara responsiv: fungera både på breda skärmar och ner till 320px.
+6. Vyer som bara administratörer använder behöver bara byggas för en större layout. (90%)
 
+7. Appen ska se snygg och professionell ut. (10%)
 
-6. Vyer som bara administratörer använder behöver bara byggas för en större layout.
+8. Webbshoppen ska ha minst 20 produkter. Det ska vara realistisk data. (Tips: ni kan hjälpas åt att ta fram en lista med bildlänkar.) (20%)
 
-7. Appen ska se snygg och professionell ut.
-
-8. Webbshoppen ska ha minst 20 produkter. Det ska vara realistisk data. (Tips: ni kan hjälpas åt att ta fram en lista med bildlänkar.)
-
-9. Koden ska testas kontinuerligt under utvecklingen, i din testgrupp. Du ska lämna in en individuell testrapport. (se nedan)
+9. Koden ska testas kontinuerligt under utvecklingen, i din testgrupp. Du ska lämna in en individuell testrapport. (se nedan) (0%)
 
 10. Alla formulär ska valideras, på det sätt vi gått igenom.
-Se presentationen! (Visa inget förrän användaren fått en chans att skriva i fälten. Var informativ och användarvänlig.)
+Se presentationen! (Visa inget förrän användaren fått en chans att skriva i fälten. Var informativ och användarvänlig.) (70%)
 
-11. Appen ska vara en statisk frontend SPA. Man får inte ladda om webbsidan. Funktionerna alert, input och location.reload är strängt förbjudna. 
+11. Appen ska vara en statisk frontend SPA. Man får inte ladda om webbsidan. Funktionerna alert, input och location.reload är strängt förbjudna. (50%) 
 
-12. Undvik vanlig DOM-manipulation t.ex. document.querySelector och använd React, JSX och state i stället.
+12. Undvik vanlig DOM-manipulation t.ex. document.querySelector och använd React, JSX och state i stället. (100%)
 
-13. Appen ska publiceras med GitHub Pages.
+13. Appen ska publiceras med GitHub Pages. (20%)
 
-14. Alla produkter ska ha namn och pris med mera.
+14. Alla produkter ska ha namn och pris med mera. (100%)
 
     1. Som en besökare vill jag kunna se alla produkter i ett rutnät, för att få en överblick på ett ordnat sätt. (Använd 1 kolumn när skärmen är smal.) 
     (70% klart)
