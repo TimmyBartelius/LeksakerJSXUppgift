@@ -23,6 +23,7 @@ const Header = () => {
             alt="Logga"
           ></img>
         </nav>
+        <p id="franchise">SVENSKA LEKSAKER AB</p>
         <nav href="cart">
           <img
             onClick={handleClickCart}

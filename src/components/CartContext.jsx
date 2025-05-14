@@ -17,6 +17,7 @@ export const CartProvider = ({ children }) => {
 
   useEffect(() => {
     const unsubscribe = onSnapshot(collection(db, "Kundvagn"), (snapshot) => {
+      //Se till att ändra detta - kolla på Davids exempel i guiderna, onSnapshot tar en "bild" av databasen, därför "unsubscribe" måste köras så den vet vart det skall ta slut för att fåttag i listan. Det funkar som det är, om du HINNER så byter du ut det - lämna det annars ifred.
       const items = snapshot.docs.map((doc) => ({
         id: doc.id,
         ...doc.data(),

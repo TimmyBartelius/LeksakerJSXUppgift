@@ -8,7 +8,7 @@ export default function Home() {
     <main>
       <Header />
       <div>
-        <h2 className="headline">Våra produkter</h2>
+        <h2 className="headline">VÅRA PRODUKTER</h2>
       </div>
       <AllToys />
       <Footer />
