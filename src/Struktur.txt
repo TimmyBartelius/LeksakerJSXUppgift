@@ -1,0 +1,54 @@
+1. Du ska använda: React, Joi, React Router (med HashRouter), state manager (Zustand, Context eller Redux) och Firestore. Fråga först om du vill använda någon annan teknik.
+
+
+2. Du ska visa upp din app och din kod för läraren minst en gång under sista kursveckan. Var beredd på att förklara vad koden gör, samt att berätta om testningen.
+
+
+3. Designskiss i Figma. (Ska testas i testgrupp - se nedan) (AMIR OCH ELHAM / VILMER & EMMA)
+
+
+4. Webbshoppen ska ha stöd för två sorters användare: kunder och administratörer.
+För G: ingen inloggning nödvändig.
+För VG: man måste logga in för att kunna använda admin-funktionalitet.
+
+
+5. För kunder ska appen vara responsiv: fungera både på breda skärmar och ner till 320px.
+
+
+6. Vyer som bara administratörer använder behöver bara byggas för en större layout.
+
+7. Appen ska se snygg och professionell ut.
+
+8. Webbshoppen ska ha minst 20 produkter. Det ska vara realistisk data. (Tips: ni kan hjälpas åt att ta fram en lista med bildlänkar.)
+
+9. Koden ska testas kontinuerligt under utvecklingen, i din testgrupp. Du ska lämna in en individuell testrapport. (se nedan)
+
+10. Alla formulär ska valideras, på det sätt vi gått igenom.
+Se presentationen! (Visa inget förrän användaren fått en chans att skriva i fälten. Var informativ och användarvänlig.)
+
+11. Appen ska vara en statisk frontend SPA. Man får inte ladda om webbsidan. Funktionerna alert, input och location.reload är strängt förbjudna. 
+
+12. Undvik vanlig DOM-manipulation t.ex. document.querySelector och använd React, JSX och state i stället.
+
+13. Appen ska publiceras med GitHub Pages.
+
+14. Alla produkter ska ha namn och pris med mera.
+
+    1. Som en besökare vill jag kunna se alla produkter i ett rutnät, för att få en överblick på ett ordnat sätt. (Använd 1 kolumn när skärmen är smal.) 
+    (70% klart)
+
+    2. Som en besökare vill jag kunna lägga till en produkt i en kundvagn, så att jag kan köpa flera saker på samma gång. 
+    (50% klart)
+
+    3. Som en besökare vill jag kunna se hur mycket alla produkter i min kundvagn kostar, så att jag vet vad det kommer kosta mig. 
+    (90% klart)
+
+    4. Som en administratör vill jag kunna lägga till, ta bort och ändra produkter; så att webbshopen kan ändra sitt sortiment och uppdatera priser.
+    (0% klart)
+
+_____________________________________________________________________________________________________________________________________________________
+
+För VG: Som en administratör vill jag att ändringar ska vara skyddade av inloggning, så att inte obehöriga ska kunna komma in. (Det ska gå att logga in med användarnamn=admin och lösenord=password.)
+För VG: Som en besökare vill jag kunna sortera produkter efter namn och pris, stigande och fallande; så jag kan hitta den billigaste.
+För VG: Som en besökare vill jag kunna ändra antalet av produkterna jag har i kundvagnen, så att jag kan ändra mig.
+För VG: Som en besökare vill jag kunna söka efter produkter med namn eller kategori, för att snabbt kunna hitta produkter jag är intresserad av. (Sökning ska vara "smart", dvs. den fungerar på delar av namn och oavsett case.)
