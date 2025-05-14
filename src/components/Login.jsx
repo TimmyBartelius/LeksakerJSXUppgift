@@ -2,7 +2,6 @@ import { useState } from "react";
 import Joi from "joi";
 import "./Loginstyle.css";
 import Header from "./Header";
-import Footer from "./Footer";
 
 const schema = Joi.string().required().messages({
   "string.empty": "Lösenordet krävs.",
@@ -56,7 +55,6 @@ export default function AdminPasswordInput({ onChange }) {
         {error && <p className="error-field">{error}</p>}
         {successMessage && <p className="success-field">{successMessage}</p>}
       </div>
-      <Footer />
     </>
   );
 }

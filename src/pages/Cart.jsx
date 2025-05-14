@@ -45,9 +45,7 @@ const Cart = () => {
           <button id="end-purchase-button" onClick={handleClearCart}>
             Slutför köp
           </button>
-          <Link to="/Login" className="admin-link">
-            Admin-inloggning
-          </Link>
+          <Link to="/Login" className="admin-link"></Link>
         </>
       )}
 
