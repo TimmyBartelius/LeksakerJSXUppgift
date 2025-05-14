@@ -35,9 +35,14 @@ const Cart = () => {
           <ul className="listed-items">
             {cartItems.map((item) => (
               <li key={item.id} className="seperation">
-                {item.title}{" "}
-                <img src={item.image} alt={item.title} id="product-pic"></img>{" "}
-                {item.quantity ?? 1} st - {item.price} kr
+                <p className="title-text">{item.title} </p>
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  id="product-pic"
+                ></img>{" "}
+                <p className="quantity-text">{item.quantity ?? 1} st</p>{" "}
+                <p className="price-text">{item.price} kr</p>
               </li>
             ))}
           </ul>

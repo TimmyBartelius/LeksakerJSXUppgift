@@ -16,6 +16,19 @@ p {
   font-size: 20px;
   font-weight: bold;
 }
+.title-text {
+  display: flex;
+  text-align: center;
+}
+#product-pic {
+  justify-self: center;
+}
+.quantity-text {
+  font-size: 30px;
+}
+.price-text {
+  font-size: 40px;
+}
 .seperation {
   background-color: rgb(255, 255, 255);
   border: solid black 3px;
