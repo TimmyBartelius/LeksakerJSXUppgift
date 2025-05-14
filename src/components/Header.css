@@ -33,13 +33,14 @@ body {
   cursor: pointer;
 }
 #allProductsBtns {
-  padding-top: 15px;
-  padding-bottom: 15px;
-  display: grid;
-  grid-template-columns: repeat(4, 25%);
+  padding: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   justify-items: center;
 }
 .picForCat {
+  justify-items: center;
   cursor: pointer;
 }
 .categories {

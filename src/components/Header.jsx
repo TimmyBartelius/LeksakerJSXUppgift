@@ -34,36 +34,23 @@ const Header = () => {
         </nav>
       </section>
       <div id="allProductsBtns">
-        <nav>
-          <img
-            className="picForCat"
-            src="./src/assets/Sommarbild.PNG"
-            alt="Sommarleksaker"
-          />
+        <nav className="picForCat">
+          <img src="./src/assets/Sommarbild.PNG" alt="Sommarleksaker" />
           <p className="categories">Sommarleksaker</p>
           <p className="hidden-categories-text">SOMMAR</p>
         </nav>
-        <nav>
-          <img
-            className="picForCat"
-            src="./src/assets/Vinterbild.PNG"
-            alt="Vinterleksaker"
-          />
+        <nav className="picForCat">
+          <img src="./src/assets/Vinterbild.PNG" alt="Vinterleksaker" />
           <p className="categories">Vinterleksaker</p>
           <p className="hidden-categories-text">VINTER</p>
         </nav>
-        <nav>
-          <img
-            className="picForCat"
-            src="./src/assets/Brädspelbild.PNG"
-            alt="Brädspel"
-          />
+        <nav className="picForCat">
+          <img src="./src/assets/Brädspelbild.PNG" alt="Brädspel" />
           <p className="categories">Brädspel</p>
           <p className="hidden-categories-text">BRÄD</p>
         </nav>
-        <nav>
+        <nav className="picForCat">
           <img
-            className="picForCat"
             src="./src/assets/Batteridrivna.PNG"
             alt="Batteridrivna leksaker"
           />
