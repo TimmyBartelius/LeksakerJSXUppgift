@@ -28,7 +28,7 @@ export default function TextField() {
 
   useEffect(() => {
     const fetchProducts = async () => {
-      // Hämta originalprodukter från AllToys
+      // Hämta standard från AllToys
       const snapshotOriginal = await getDocs(collection(db, "AllToys"));
       const listOriginal = snapshotOriginal.docs.map((doc) => ({
         id: doc.id,
@@ -36,7 +36,7 @@ export default function TextField() {
       }));
       setOriginalProducts(listOriginal);
 
-      // Hämta nya produkter från ExtraToys
+      // Hämta nya från ExtraToys
       const snapshotNew = await getDocs(collection(db, "ExtraToys"));
       const listNew = snapshotNew.docs.map((doc) => ({
         id: doc.id,
@@ -44,7 +44,6 @@ export default function TextField() {
       }));
       setNewProducts(listNew);
 
-      // Skapa editCache för båda listorna
       const cache = {};
       [...listOriginal, ...listNew].forEach((p) => {
         cache[p.id] = {
@@ -205,14 +204,22 @@ export default function TextField() {
     <>
       <Header />
       <div className="edit-container">
-        <button onClick={handleAddProduct}>Lägg till ny produkt</button>
+        <button className="buttons-editor" onClick={handleAddProduct}>
+          Lägg till ny produkt
+        </button>
 
-        <div className="toggle-buttons">
-          <button onClick={() => setShowOriginal((prev) => !prev)}>
+        <div className="buttons-in-editor">
+          <button
+            className="buttons-editor"
+            onClick={() => setShowOriginal((prev) => !prev)}
+          >
             {showOriginal ? "Dölj originalprodukter" : "Visa originalprodukter"}
           </button>
 
-          <button onClick={() => setShowNew((prev) => !prev)}>
+          <button
+            className="buttons-editor"
+            onClick={() => setShowNew((prev) => !prev)}
+          >
             {showNew ? "Dölj nya produkter" : "Visa nya produkter"}
           </button>
         </div>
