@@ -1,7 +1,9 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Joi from "joi";
 import "./Loginstyle.css";
 import Header from "./Header";
+import AdminPanel from "./AdminPanel";
 
 const schema = Joi.string().required().messages({
   "string.empty": "Lösenordet krävs.",
@@ -13,6 +15,8 @@ export default function AdminPasswordInput({ onChange }) {
   const [error, setError] = useState("");
   const [successMessage, setSuccessMessage] = useState("");
   const correctPassword = "password";
+  const navigate = useNavigate();
+
   //Vi lägger till ett "standard lösenord" som är "rätt" vid inloggning, annars lägger vi upp att vi använder useState med tomma fält.
   const handleLogin = () => {
     const validation = schema.validate(password);
@@ -27,6 +31,7 @@ export default function AdminPasswordInput({ onChange }) {
       //Om det specifika lösenordet inte skrivs in kommer det här error-meddelandet istället för det i listan ovan.
       setSuccessMessage("");
     } else {
+      navigate("/Login/AdminPanel");
       //Annars händer detta
       setError("");
       setSuccessMessage("Inloggningen lyckades!");

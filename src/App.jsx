@@ -2,6 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import AdminPasswordInput from "./components/Login";
 import Cart from "./pages/Cart";
+import AdminPanel from "./components/AdminPanel.jsx";
 
 export default function App() {
   return (
@@ -11,6 +12,7 @@ export default function App() {
         <Route path="/Cart" element={<Cart />} />
         <Route path="/Login" element={<AdminPasswordInput />} />
         <Route path="/Cart/Login" element={<AdminPasswordInput />} />
+        <Route path="/Login/AdminPanel" element={<AdminPanel />} />
       </Routes>
     </main>
   );
