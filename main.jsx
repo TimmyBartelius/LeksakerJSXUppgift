@@ -1,8 +1,13 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
 import { HashRouter } from "react-router-dom";
+<<<<<<< HEAD:src/main.jsx
 import App from "./App.jsx";
 import { CartProvider } from "./components/CartContext.jsx";
+=======
+import App from "./src/App.jsx";
+import { CartProvider } from "./src/components/CartContext.jsx";
+>>>>>>> 9e245bada5dd8824f98106812d7194b351c83852:main.jsx
 
 createRoot(document.getElementById("root")).render(
   <React.StrictMode>
