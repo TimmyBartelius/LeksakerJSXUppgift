@@ -10,6 +10,8 @@ import {
 import Joi from "joi";
 import "./Edit.css";
 import Header from "/src/components/Header";
+import { clearExtraToys } from "/src/Components/clearExtraToys";
+import deleteExtraToy from "/src/components/deleteToys";
 
 export default function TextField() {
   const [originalProducts, setOriginalProducts] = useState([]);
@@ -64,7 +66,8 @@ export default function TextField() {
     const newProduct = {
       title: "Ny produkt",
       breadtext: "Beskrivning",
-      image: "https://via.placeholder.com/100",
+      image:
+        "https://scontent-arn2-1.xx.fbcdn.net/v/t39.30808-6/458383024_10162048330247360_5508830640052136751_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=PUyAbWEdSBsQ7kNvwHzyqEA&_nc_oc=AdkXG8LUdaqK1HiAwY82eGYy_qfW6iOkgktdXRfq-GwA78ineTqWnCeGjDMawyPrVZJpDQNQNTsS0rtAvKlLSNgV&_nc_zt=23&_nc_ht=scontent-arn2-1.xx&_nc_gid=5oze6tWXtUWZ-unI_ZeUAg&oh=00_AfJAx2Ohb-dOC175vD2XjdeqNpF03cb14G9p8EM6A_dq5g&oe=682D2138",
       price: 0,
       quantity: 1,
     };
@@ -126,6 +129,19 @@ export default function TextField() {
           field === "price" || field === "quantity" ? Number(value) : value,
       },
     }));
+  };
+  const handleDelete = async (id) => {
+    try {
+      await deleteExtraToy(id);
+      setNewProducts((prev) => prev.filter((p) => p.id !== id));
+      setEditCache((prev) => {
+        const updated = { ...prev };
+        delete updated[id];
+        return updated;
+      });
+    } catch (error) {
+      console.error("Fel vid radering av produkt:", error.message);
+    }
   };
 
   const renderProductList = (list, type) => (
@@ -195,6 +211,9 @@ export default function TextField() {
           <button className="save-btn" onClick={() => handleSave(p.id)}>
             Spara
           </button>
+          <div key={p.id}>
+            <button onClick={() => deleteExtraToy(p.id)}>Ta bort</button>
+          </div>
         </li>
       ))}
     </ul>
@@ -204,6 +223,9 @@ export default function TextField() {
     <>
       <Header />
       <div className="edit-container">
+        <button className="buttons-editor" onClick={clearExtraToys}>
+          Ta bort ALLA nya produkter
+        </button>
         <button className="buttons-editor" onClick={handleAddProduct}>
           Lägg till ny produkt
         </button>

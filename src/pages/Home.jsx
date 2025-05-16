@@ -30,6 +30,7 @@ export default function Home() {
     };
     fetchToys();
   }, []);
+
   return (
     <main>
       <Header />
