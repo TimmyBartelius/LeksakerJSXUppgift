@@ -56,8 +56,11 @@
   color: rgb(0, 0, 0);
   background-color: rgb(217, 0, 0);
 }
+#quantityInCart.hidden {
+  display: none;
+}
+
 #quantityInCart {
-  display: block;
   justify-self: center;
   font-size: 30px;
   margin: 0;

@@ -17,11 +17,11 @@ export default function AllToys({ toys }) {
 
   const toySchema = Joi.object({
     title: Joi.string().required(),
-    image: Joi.string().uri().required(),
+    image: Joi.string().optional(),
     breadtext: Joi.string().required(),
     price: Joi.number().required(),
     quantity: Joi.number().optional(),
-  });
+  }).unknown(true);
 
   useEffect(() => {
     const fetchCart = async () => {
@@ -113,9 +113,13 @@ export default function AllToys({ toys }) {
         }
       });
 
+      // Ändring här: ta bort från addedToCart endast om quantity blir 0
       setAddedToCart((prev) => {
         const newSet = new Set(prev);
-        newSet.delete(toyId);
+        const found = cart.find((item) => item.id === toyId);
+        if (found && found.quantity === 1) {
+          newSet.delete(toyId);
+        }
         return newSet;
       });
     } catch (error) {
@@ -136,9 +140,13 @@ export default function AllToys({ toys }) {
             <button id="remBtn" onClick={() => removeToyFromCart(toy.id)}>
               TA BORT
             </button>
-            <p id="quantityInCart">
-              {" "}
-              {cart.find((item) => item.id === toy.id)?.quantity || 0} st
+            <p
+              id="quantityInCart"
+              className={addedToCart.has(toy.id) ? "" : "hidden"}
+            >
+              {addedToCart.has(toy.id)
+                ? `${cart.find((item) => item.id === toy.id)?.quantity || 0} st`
+                : ""}
             </p>
             <div className="text-card">{toy.breadtext}</div>
             <div className="price-card">{toy.price} kr</div>
