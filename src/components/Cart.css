@@ -31,7 +31,7 @@ p {
 }
 .seperation {
   background-color: rgb(255, 255, 255);
-  border: solid black 3px;
+  border: solid rgb(0, 0, 0) 3px;
   border-radius: 5px;
   margin: 10px;
   padding: 10px;
@@ -62,7 +62,7 @@ p {
   background-color: rgb(255, 255, 255);
   display: block;
   justify-self: center;
-  border: solid 3px black;
+  border: solid 3px rgb(0, 0, 0);
   border-radius: 5px;
   text-align: center;
   width: 300px;
