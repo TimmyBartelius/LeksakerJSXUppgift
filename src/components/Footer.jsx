@@ -8,7 +8,7 @@ const Footer = () => {
   const navigate = useNavigate();
 
   const handleClickAdmin = () => {
-    navigate("./Login");
+    navigate("/Login");
   };
 
   return (
