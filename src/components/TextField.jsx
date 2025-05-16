@@ -8,7 +8,7 @@ import {
   updateDoc,
 } from "firebase/firestore";
 import Joi from "joi";
-import "./Edit.css";
+import "/Edit.css";
 import Header from "/src/components/Header";
 import { clearExtraToys } from "/src/Components/clearExtraToys";
 import deleteExtraToy from "/src/components/deleteToys";

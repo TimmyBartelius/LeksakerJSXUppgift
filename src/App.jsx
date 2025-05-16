@@ -1,9 +1,9 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import Home from "./pages/Home";
+import Home from "/pages/Home";
 import AdminPasswordInput from "./components/Login";
-import Cart from "./pages/Cart";
-import AdminPanel from "./components/AdminPanel.jsx";
+import Cart from "/pages/Cart";
+import AdminPanel from "/components/AdminPanel.jsx";
 
 export default function App() {
   return (

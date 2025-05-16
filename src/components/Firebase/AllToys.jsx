@@ -7,9 +7,9 @@ import {
   setDoc,
   deleteDoc,
 } from "firebase/firestore";
-import { db } from "../firebase";
+import { db } from "/firebase";
 import Joi from "joi";
-import "./AllToys-style.css";
+import "/AllToys-style.css";
 
 export default function AllToys({ toys }) {
   const [cart, setCart] = useState([]);

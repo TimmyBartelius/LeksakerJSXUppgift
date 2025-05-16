@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { useCart } from "../components/CartContext";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
-import "../components/Cart.css";
+import { useCart } from "/components/CartContext";
+import Header from "/components/Header";
+import Footer from "/components/Footer";
+import "/components/Cart.css";
 
 const Cart = () => {
   const { cartItems, clearCart } = useCart();

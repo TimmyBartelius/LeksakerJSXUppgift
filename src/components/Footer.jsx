@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom"; //Jag importerar useNavigate från react-router-dom för att kunna använda routern
-import "./Footer.css";
+import "/Footer.css";
 
 //Jag importerar css style från Footer.css
 

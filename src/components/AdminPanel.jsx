@@ -8,7 +8,7 @@ import {
   addDoc,
   deleteDoc,
 } from "firebase/firestore";
-import TextField from "./TextField";
+import TextField from "/TextField";
 
 export default function AdminPanel() {
   const [products, setProducts] = useState([]);

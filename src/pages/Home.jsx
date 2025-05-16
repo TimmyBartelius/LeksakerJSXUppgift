@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "/src/components/firebase";
-import "../components/Home.css";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
-import AllToys from "../components/Firebase/AllToys";
+import "/components/Home.css";
+import Header from "/components/Header";
+import Footer from "/components/Footer";
+import AllToys from "/components/Firebase/AllToys";
 
 export default function Home() {
   const [allToys, setAllToys] = useState([]);
