@@ -1,13 +1,17 @@
+import React from "react";
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import AdminPasswordInput from "./components/Login";
 import Cart from "./pages/Cart";
 import AdminPanel from "./components/AdminPanel.jsx";
 
+function Home() {
+  return <div>Hej från Home</div>;
+}
+
 export default function App() {
   return (
     <main>
-      <div>Varför bråkar det som fan?</div>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Cart" element={<Cart />} />
