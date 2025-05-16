@@ -1,12 +1,12 @@
 import { useNavigate } from "react-router-dom";
 import "./Header.css";
 
-import Logga from "./JSX-Slutuppgift/Logga.png";
-import Cart from "./JSX-Slutuppgift/Cart.png";
-import Sommarbild from "./JSX-Slutuppgift/assets/Sommarbild.PNG";
-import Vinterbild from "./JSX-Slutuppgift/assets/Vinterbild.PNG";
-import Brädspelbild from "./JSX-Slutuppgift/assets/Brädspelbild.PNG";
-import Batteridrivna from "./JSX-Slutuppgift/assets/Batteridrivna.PNG";
+import Logga from "/JSX-Slutuppgift/Logga.png";
+import Cart from "/JSX-Slutuppgift/Cart.png";
+import Sommarbild from "/JSX-Slutuppgift/assets/Sommarbild.PNG";
+import Vinterbild from "/JSX-Slutuppgift/assets/Vinterbild.PNG";
+import Brädspelbild from "/JSX-Slutuppgift/assets/Brädspelbild.PNG";
+import Batteridrivna from "/JSX-Slutuppgift/assets/Batteridrivna.PNG";
 
 const Header = () => {
   const navigate = useNavigate();
