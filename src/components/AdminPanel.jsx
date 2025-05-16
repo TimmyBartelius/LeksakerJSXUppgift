@@ -75,16 +75,6 @@ export default function AdminPanel() {
 
   return (
     <div>
-      <h2>Admin Panel – Produkter</h2>
-
-      <h3>Lägg till ny produkt</h3>
-      <TextField
-        label="Namn"
-        value={newName}
-        onChange={setNewName}
-        placeholder="Produktnamn"
-        error={errors.newName}
-      />
       <TextField
         label="Pris"
         value={newPrice}
@@ -92,29 +82,6 @@ export default function AdminPanel() {
         placeholder="Pris i SEK"
         error={errors.newPrice}
       />
-      <button onClick={addProduct}>Lägg till produkt</button>
-
-      <h3>Existerande produkter</h3>
-      {products.map((product) => (
-        <div key={product.id} style={{ marginBottom: "1rem" }}>
-          <TextField
-            label="Namn"
-            value={product.namn}
-            onChange={(val) => updateProduct(product.id, { namn: val })}
-          />
-          <TextField
-            label="Pris"
-            value={product.pris}
-            onChange={(val) => {
-              const priceNum = parseFloat(val);
-              if (!isNaN(priceNum) && priceNum >= 0) {
-                updateProduct(product.id, { pris: priceNum });
-              }
-            }}
-          />
-          <button onClick={() => deleteProduct(product.id)}>Ta bort</button>
-        </div>
-      ))}
     </div>
   );
 }

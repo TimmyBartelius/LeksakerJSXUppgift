@@ -11,8 +11,7 @@ import { db } from "../firebase";
 import Joi from "joi";
 import "./AllToys-style.css";
 
-export default function AllToys() {
-  const [toys, setToys] = useState([]);
+export default function AllToys({ toys }) {
   const [cart, setCart] = useState([]);
   const [addedToCart, setAddedToCart] = useState(new Set());
 
@@ -25,16 +24,6 @@ export default function AllToys() {
   });
 
   useEffect(() => {
-    const fetchToys = async () => {
-      const toysCol = collection(db, "AllToys");
-      const toysSnapshot = await getDocs(toysCol);
-      const toysList = toysSnapshot.docs.map((doc) => ({
-        id: doc.id,
-        ...doc.data(),
-      }));
-      setToys(toysList);
-    };
-
     const fetchCart = async () => {
       const cartCol = collection(db, "Kundvagn");
       const cartSnapshot = await getDocs(cartCol);
@@ -46,15 +35,17 @@ export default function AllToys() {
       setAddedToCart(new Set(cartList.map((item) => item.id)));
     };
 
-    fetchToys();
     fetchCart();
   }, []);
 
   const addToyToCart = async (toyId) => {
     try {
-      const toyRef = doc(db, "AllToys", toyId);
-      const toySnapshot = await getDoc(toyRef);
-      const toyData = toySnapshot.data();
+      const toyData = toys.find((toy) => toy.id === toyId);
+
+      if (!toyData) {
+        console.error("Leksak hittades inte i listan");
+        return;
+      }
 
       const { error } = toySchema.validate(toyData);
       if (error) {

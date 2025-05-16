@@ -1,16 +1,42 @@
+import { useState, useEffect } from "react";
+import { collection, getDocs } from "firebase/firestore";
+import { db } from "/src/components/firebase";
 import "../components/Home.css";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import AllToys from "../components/Firebase/AllToys";
 
 export default function Home() {
+  const [allToys, setAllToys] = useState([]);
+
+  useEffect(() => {
+    const fetchToys = async () => {
+      const allToysSnapshot = await getDocs(collection(db, "AllToys"));
+      const extraToysSnapshot = await getDocs(collection(db, "ExtraToys"));
+
+      const allToysList = allToysSnapshot.docs.map((doc) => ({
+        id: doc.id,
+        ...doc.data(),
+      }));
+
+      const extraToysList = extraToysSnapshot.docs.map((doc) => ({
+        id: doc.id,
+        ...doc.data(),
+      }));
+
+      const combinedToys = [...allToysList, ...extraToysList];
+
+      setAllToys(combinedToys);
+    };
+    fetchToys();
+  }, []);
   return (
     <main>
       <Header />
       <div>
         <h2 className="headline">VÅRA PRODUKTER</h2>
       </div>
-      <AllToys />
+      <AllToys toys={allToys} />
       <Footer />
     </main>
   );
