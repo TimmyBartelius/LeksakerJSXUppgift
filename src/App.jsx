@@ -7,6 +7,7 @@ import AdminPanel from "./components/AdminPanel.jsx";
 export default function App() {
   return (
     <main>
+      <div>Varför bråkar det som fan?</div>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Cart" element={<Cart />} />
