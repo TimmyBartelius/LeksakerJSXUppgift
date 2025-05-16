@@ -1,6 +1,13 @@
 import { useNavigate } from "react-router-dom";
 import "./Header.css";
 
+import Logga from "./Logga.png";
+import Cart from "./Cart.png";
+import Sommarbild from "./assets/Sommarbild.PNG";
+import Vinterbild from "./assets/Vinterbild.PNG";
+import Brädspelbild from "./assets/Brädspelbild.PNG";
+import Batteridrivna from "./assets/Batteridrivna.PNG";
+
 const Header = () => {
   const navigate = useNavigate();
 
@@ -19,41 +26,33 @@ const Header = () => {
           <img
             onClick={handleClickLogo}
             id="logo"
-            src="./Logga.png"
+            src={Logga}
             alt="Logga"
           ></img>
         </nav>
         <p id="franchise">SVENSKA LEKSAKER AB</p>
         <nav href="cart">
-          <img
-            onClick={handleClickCart}
-            id="cartLogo"
-            src="./Cart.png"
-            alt="Cart"
-          />
+          <img onClick={handleClickCart} id="cartLogo" src={Cart} alt="Cart" />
         </nav>
       </section>
       <div id="allProductsBtns">
         <nav className="picForCat">
-          <img src="./src/assets/Sommarbild.PNG" alt="Sommarleksaker" />
+          <img src={Sommarbild} alt="Sommarleksaker" />
           <p className="categories">Sommarleksaker</p>
           <p className="hidden-categories-text">SOMMAR</p>
         </nav>
         <nav className="picForCat">
-          <img src="./src/assets/Vinterbild.PNG" alt="Vinterleksaker" />
+          <img src={Vinterbild} alt="Vinterleksaker" />
           <p className="categories">Vinterleksaker</p>
           <p className="hidden-categories-text">VINTER</p>
         </nav>
         <nav className="picForCat">
-          <img src="./src/assets/Brädspelbild.PNG" alt="Brädspel" />
+          <img src={Brädspelbild} alt="Brädspel" />
           <p className="categories">Brädspel</p>
           <p className="hidden-categories-text">BRÄD</p>
         </nav>
         <nav className="picForCat">
-          <img
-            src="./src/assets/Batteridrivna.PNG"
-            alt="Batteridrivna leksaker"
-          />
+          <img src={Batteridrivna} alt="Batteridrivna leksaker" />
           <p className="categories">Batteridrivet</p>
           <p className="hidden-categories-text">BATTERI</p>
         </nav>

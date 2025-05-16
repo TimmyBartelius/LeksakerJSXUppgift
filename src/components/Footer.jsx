@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom"; //Jag importerar useNavigate från react-router-dom för att kunna använda routern
 import "./Footer.css";
+import adminImg from "../assets/Admin.PNG";
 //Jag importerar css style från Footer.css
 
 const Footer = () => {
@@ -15,7 +16,7 @@ const Footer = () => {
     <main>
       <section id="footerBack">
         <button onClick={handleClickAdmin} id="adminLogin">
-          <img src="./src/assets/Admin.PNG" alt="AdminLogin" />
+          <img src={adminImg} alt="AdminLogin" />
         </button>
       </section>
     </main>
