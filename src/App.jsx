@@ -5,10 +5,6 @@ import AdminPasswordInput from "./components/Login";
 import Cart from "./pages/Cart";
 import AdminPanel from "./components/AdminPanel.jsx";
 
-function Home() {
-  return <div>Hej från Home</div>;
-}
-
 export default function App() {
   return (
     <main>
