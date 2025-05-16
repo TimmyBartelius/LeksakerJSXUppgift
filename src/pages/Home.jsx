@@ -33,6 +33,7 @@ export default function Home() {
 
   return (
     <main>
+      <div>Jävlahelvetesjävlafuckingskitsidhelvetesfittfanskap</div>
       <Header />
       <div>
         <h2 className="headline">VÅRA PRODUKTER</h2>
