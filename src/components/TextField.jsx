@@ -44,6 +44,7 @@ export default function TextField() {
         id: doc.id,
         ...doc.data(),
       }));
+      // Uppdatera listan
       setNewProducts(listNew);
 
       const cache = {};
@@ -61,7 +62,7 @@ export default function TextField() {
 
     fetchProducts();
   }, []);
-
+  //funktion för att lägga till en produkt, med standard bildlänk
   const handleAddProduct = async () => {
     const newProduct = {
       title: "Ny produkt",
@@ -71,7 +72,7 @@ export default function TextField() {
       price: 0,
       quantity: 1,
     };
-
+    //Validera produktne
     const validation = schema.validate(newProduct);
     if (validation.error) {
       console.error("Valideringsfel:", validation.error.details[0].message);
@@ -119,7 +120,7 @@ export default function TextField() {
       console.error("Fel vid uppdatering:", error.message);
     }
   };
-
+  //Editera produkten (för original-listan så de inte tas bort helt)
   const handleEdit = (id, field, value) => {
     setEditCache((prev) => ({
       ...prev,
@@ -130,8 +131,7 @@ export default function TextField() {
       },
     }));
   };
-  };
-
+  //Ihopslaget
   const renderProductList = (list, type) => (
     <ul className={`list-${type}`}>
       {list.map((p) => (
@@ -205,7 +205,7 @@ export default function TextField() {
       ))}
     </ul>
   );
-
+  //Returnera det som syns på skärmen
   return (
     <>
       <Header />
