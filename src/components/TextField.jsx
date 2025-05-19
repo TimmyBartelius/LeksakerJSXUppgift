@@ -130,18 +130,6 @@ export default function TextField() {
       },
     }));
   };
-  const handleDelete = async (id) => {
-    try {
-      await deleteExtraToy(id);
-      setNewProducts((prev) => prev.filter((p) => p.id !== id));
-      setEditCache((prev) => {
-        const updated = { ...prev };
-        delete updated[id];
-        return updated;
-      });
-    } catch (error) {
-      console.error("Fel vid radering av produkt:", error.message);
-    }
   };
 
   const renderProductList = (list, type) => (
@@ -196,7 +184,6 @@ export default function TextField() {
             {editCache[p.id]?.image}
           </div>
 
-          <p>Antal i lager:</p>
           <div
             className="sections-edit"
             contentEditable
