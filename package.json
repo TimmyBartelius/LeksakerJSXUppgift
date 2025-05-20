@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist",
+    "deploy": "gh-pages -d dist -r https://github.io/TimmyBartelius/LeksakerJSXUppgift.git",
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",

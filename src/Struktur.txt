@@ -1,14 +1,18 @@
 
 
 3. Designskiss i Figma. (Ska testas i testgrupp - se nedan) (AMIR OCH ELHAM / VILMER & EMMA)
+Tiden har inte funnits då jag fastnade med att lägga upp sidan som fungerande på github - jag har däremot kollat Amirs kod. Men utöver det har jag inte fokuserat på annat än att bara få mitt eget att faktiskt fungera.
 
 
 
-9. Koden ska testas kontinuerligt under utvecklingen, i din testgrupp. Du ska lämna in en individuell testrapport. (se nedan) (0%)
 
 
 
-13. Appen ska publiceras med GitHub Pages. (20%)
+
+13. Appen ska publiceras med GitHub Pages. (50%)
+Enligt Github funkar allting som det ska, får bara upp en vit ruta utan felkoder - hur jag än gör så får jag inte fram någonting. Såvitt jag luskat fram så gör inte vite det den ska göra med att uppdatera mapparna och lägga dem i distmappen - av någon anledning. Jag har placerat dem på olika platser, försökt att installera om allting flertalet gånger, rådfrågat högt och lågt på internet - men det verkar inte finnas något sätt att lösa det på? Eller så bara vet jag inte vad jag gjort rätt/fel i hela processen.
+
+
 
 
 
